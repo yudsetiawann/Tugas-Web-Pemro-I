@@ -1,25 +1,14 @@
-/*
- * File: style.css
- * Berisi gaya kustom tambahan
- */
-
-/* 1. Menambahkan kelas text-shadow yang Anda gunakan di kode asli */
 .text-shadow-lg {
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 2. Animasi Elegan "Reveal on Scroll" (INI YANG HILANG) */
-
-/* Sembunyikan elemen secara default */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   transition-delay: var(--delay, 0s);
-  /* --delay adalah variabel opsional, bisa di-set di inline style */
 }
 
-/* Tampilkan elemen saat kelas 'revealed' ditambahkan oleh JS */
 .reveal.revealed {
   opacity: 1;
   transform: translateY(0);

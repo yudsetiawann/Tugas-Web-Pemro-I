@@ -1,10 +1,5 @@
-/*
- * File: script.js
- * Berisi semua logika JavaScript untuk interaktivitas
- */
-
 document.addEventListener("DOMContentLoaded", () => {
-  // --- 1. Logika Menu Mobile (TETAP SAMA) ---
+  // 1. Logika Menu Mobile
   const menuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
 
@@ -14,30 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 2. Logika Animasi Scroll Reveal (INI YANG DIUBAH) ---
+  // 2. Logika Animasi Scroll Reveal
   const revealElements = document.querySelectorAll(".reveal");
 
   if (revealElements.length > 0) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // ===========================================
-          // AWAL MODIFIKASI
-          // Kita gunakan if...else di sini
-          // ===========================================
-
           if (entry.isIntersecting) {
             // Saat elemen terlihat, tambahkan kelas 'revealed'
             entry.target.classList.add("revealed");
           } else {
             // Saat elemen keluar dari pandangan, hapus kelas 'revealed'
-            // Ini akan "mereset" animasi untuk pemunculan berikutnya
             entry.target.classList.remove("revealed");
           }
-
-          // ===========================================
-          // AKHIR MODIFIKASI
-          // ===========================================
         });
       },
       {
