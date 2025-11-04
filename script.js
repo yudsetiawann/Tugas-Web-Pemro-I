@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Mencegah form mengirim data secara normal
       event.preventDefault();
 
-      const nomorWhatsApp = "6285185072004";
+      const nomorWhatsApp = "6285186072004";
 
       // Ambil data dari form
       const name = document.getElementById("name").value;
